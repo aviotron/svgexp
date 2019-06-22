@@ -1,22 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SVG Experiments!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <style>
+    .ball{
+        display: inline-block;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 100px;
+        background-color: black;
+        animation: ball-motion 2s cubic-bezier(0.075, 0.82, 0.165, 1) infinite  ;
+    }
+
+    @keyframes ball-motion{
+        0%{
+                background: blueviolet;
+                transform: translateX(0%);
+        }
+
+        50%{
+            background:teal;
+            transform: translateX(100%);
+        }
+
+        100%{
+            background: purple;
+            transform: translateX(0%);
+        }
+       
+    }
+    </style>
+</head>
+
+<body>
   <section class="section">
     <div class="container">
       <h1 class="title">
-        Hello World
+        My Experiments
       </h1>
       <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
+        with <strong>SVG</strong>!
       </p>
     </div>
   </section>
-  </body>
+  <div class="card">
+      <div class="ball">
+          <svg fill="none" height="100" viewBox="0 0 331 100" xmlns="http://www.w3.org/2000/svg">
+            <g clip-rule="evenodd" fill="#fff" fill-rule="evenodd">
+              <path
+                d="m69.4728 71.9456c-5.0909 5.1014-12.0583 8.1765-20.055 8.1765-16.5641 0-28.8859-13.332-28.8859-30.603 0-7.6572 2.5458-14.476 6.8685-19.6458l-4.9462-4.9462c-5.7748 6.408-9.1944 14.9967-9.1944 24.592 0 20.8061 15.453 37.1682 36.158 37.1682 9.9099 0 18.5773-3.7176 24.9431-9.8536z" />
+              <path
+                d="m49.4179 19.8249c16.6652 0 28.8862 12.8271 28.8862 29.6945 0 7.8492-2.5304 14.8787-6.8492 20.2191l4.955 4.9549c5.7663-6.5806 9.1666-15.3848 9.1666-25.174 0-20.4025-15.3522-36.2597-36.1586-36.2597-9.8516 0-18.5093 3.5956-24.8842 9.5575l4.8856 4.8856c5.1006-4.9257 12.06-7.8779 19.9986-7.8779z" />
+              <path
+                d="m153.649 14.4719h-2.019c-1.617 0-2.526.7956-2.526 2.5249 0 8.7754-.001 43.5787-.001 58.6193 0 0-.007-.0138-.017-.0345v9.1895c.576.4757 1.267.7044 2.14.7044h2.423c1.616 0 2.424-.9091 2.424-2.5251v-65.9536c0-1.6158-.808-2.5249-2.424-2.5249z" />
+              <path
+                d="m146.124 69.7211c-.803-1.4773-1.672-2.9726-2.474-4.1431l-33.103-46.6102v11.3108c.808 1.4315 1.686 2.9033 2.5 4.0903l33.077 46.4406z" />
+              <path
+                d="m107.585 43.3301v-28.2c-.592-.4456-1.268-.6583-2.113-.6583h-2.424c-1.616 0-2.424.9091-2.424 2.5249v65.9536c0 1.616.808 2.5251 2.424 2.5251h2.121c1.514 0 2.459-.9091 2.459-2.5251v-39.6202z" />
+              <path
+                d="m192.028 23.7054v59.245c0 1.6158.909 2.5249 2.525 2.5249h2.021c1.616 0 2.424-.9091 2.424-2.5249v-59.245z" />
+              <path
+                d="m222.026 14.4719h-52.925c-1.616 0-2.525.9091-2.525 2.5249v1.2121c0 1.6161.909 2.5249 2.525 2.5249h22.927v.0091h6.969v-.0091h23.029c1.616 0 2.524-.9088 2.524-2.5249v-1.2121c0-1.6158-.908-2.5249-2.524-2.5249z" />
+              <path
+                d="m232.562 16.9968c0-1.616.808-2.5249 2.424-2.5249h2.121c1.515 0 2.424.9089 2.424 2.5249v65.9536c0 1.616-.909 2.5251-2.424 2.5251h-2.121c-1.616 0-2.424-.9091-2.424-2.5251z" />
+              <path
+                d="m270.123 70.835c-4.882-5.5456-7.63-13.1119-7.63-21.4168 0-16.6652 11.312-29.5934 28.583-29.5934 9.797 0 16.666 4.1409 19.695 6.2622 1.313.9088 2.526.808 3.434-.4042l.91-1.313c.808-1.313.808-2.5248-.405-3.5348-3.232-2.5251-11.211-7.5751-23.836-7.5751-20.907 0-35.653 15.6552-35.653 36.2594 0 10.3516 3.585 19.6425 9.871 26.3467z" />
+              <path
+                d="m316.831 73.8602-.909-1.1108c-1.01-1.3132-2.222-1.3132-3.434-.3033-3.131 2.5249-10.504 7.676-21.109 7.676-7.762 0-14.3-2.7022-19.184-7.1699l-4.977 4.9773c6.121 5.4721 14.313 8.758 23.959 8.758 13.332 0 22.119-6.464 25.452-9.2922 1.111-1.1111 1.212-2.3229.202-3.5351z" />
+            </g>
+          </svg>
+      
+        </div>
+
+  </div>
+
+
+
+  <section>
+
+  </section>
+</body>
+
 </html>
